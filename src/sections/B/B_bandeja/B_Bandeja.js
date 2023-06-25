@@ -2,9 +2,8 @@ import {useState, useCallback, useContext, useRef} from 'react'
 import { Stack, Box, Tab, Tabs, Button, Typography, Grid } from '@mui/material'
 import {  InputAdornment, OutlinedInput, SvgIcon, InputLabel, NativeSelect, IconComponent } from '@mui/material';
 
-import youtubeApi from '@components/pages/api/youtube';
 import MagnifyingGlassIcon from '@heroicons/react/24/solid/MagnifyingGlassIcon';
-import { Stage } from '../A_bandeja/A_Stage';
+import { Stage } from '../../A/A_bandeja/A_Stage';
 import { width } from '@mui/system';
 import Image from 'next/image';
 import YouTubeIcon from '@mui/icons-material/YouTube';

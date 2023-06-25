@@ -1,8 +1,8 @@
 import {useState, useRef} from 'react'
 import Grid from '@mui/system/Unstable_Grid/Grid'
 import { Stack } from '@mui/material';
-import { Bandeja } from '@components/components/Bandeja/Bandeja';
 
+import { B_Bandeja } from './B_bandeja/B_Bandeja';
 import { Reproductor } from '@components/components/Reproductor/Reproductor';
 export const B = () => {
   const [service, setService ] = useState('youtube')
@@ -18,7 +18,7 @@ export const B = () => {
         
 
       <Reproductor  side={B_REF.current} service={service}/>
-      <Bandeja side={B_REF.current} service={service} setService={setService}  />
+      <B_Bandeja side={B_REF.current} service={service} setService={setService}  />
   
 
      </Stack>

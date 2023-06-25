@@ -2,6 +2,9 @@ import { createContext, useReducer } from "react";
 import { GlobalState } from "@components/redux/GlobalState";
 import youtubeApi from "@components/pages/api/youtube";
 import { TYPES } from "@components/redux/Types";
+
+
+
 const GeneralContext = createContext()
 
 export default GeneralContext
@@ -174,7 +177,8 @@ const addingToSB = (data) =>{
 
 
   return (
-    <GeneralContext.Provider value={{ state, dispatch, onSearchA, onSearchB, addingToSA, addingToSB }}>
+    <GeneralContext.Provider 
+      value={{ state, dispatch, onSearchA, onSearchB, addingToSA, addingToSB }}>
       {children}
       </GeneralContext.Provider>
   )

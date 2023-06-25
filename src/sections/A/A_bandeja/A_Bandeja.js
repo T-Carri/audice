@@ -14,23 +14,17 @@ import { StageHistorial } from './A_StageHistorial';
  
 
 export const A_Bandeja = (props) => {
-  
-  const {service, setService,side} = props
+
+  const {service, setService, side} = props
   
   const { state,  onSearchA } = useContext(GeneralContext);
-
-
-    const [method, setMethod] = useState('stage');
   
- 
-    const [isFocused, setIsFocused] = useState(false);
-    
-    const [videos, setVideos] = useState([]);
-    
-  console.log(state)
-   const ValorRef = useRef('')
+  const [method, setMethod] = useState('stage');
+  const [isFocused, setIsFocused] = useState(false);
+  const [videos, setVideos] = useState([]);
 
-
+  console.log(state)                                                                                                                 
+  const ValorRef = useRef('')
 
   const handleFocus = () => {
     setIsFocused(true);
@@ -38,21 +32,20 @@ export const A_Bandeja = (props) => {
   
   };
   
+  
   const handleBlur = () => {
     setIsFocused(false);
   };
   
-
-
+ 
   const handleMethodChange = useCallback(
     (event, value) => {
       setMethod(value);
     },
     []
   );
-
-
-  const handleInputChange = () => {
+    
+      const handleInputChange = () => {
     // Aquí puedes realizar cualquier acción que desees con el valor del campo de búsqueda
     //console.log('Valor de búsqueda:', ValorRef.current);
     onSearchA(ValorRef.current)

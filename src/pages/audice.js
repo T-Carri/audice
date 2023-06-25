@@ -1,7 +1,5 @@
-
-
 import Head from 'next/head'
-import Image from 'next/image'
+
 import { Inter } from 'next/font/google'
 import Navbar from '@components/components/Navbar'
 import { styled } from '@mui/material/styles';
@@ -47,15 +45,22 @@ export default function Home() {
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Shadows+Into+Light&display=swap" rel="stylesheet"></link>
     
       </Head>
-  <Navbar/>
+    <Navbar/>
   <LayoutRoot>
-        <LayoutContainer>
+  <LayoutContainer>
       <main >
-        <Grid container height={600} style={{ backgroundColor:'yellow'}} /* sx={{mt:'10'}} */>
-<A/>
+<Grid container 
+     height={600} 
+     style={{ backgroundColor:'yellow'}} /* sx={{mt:'10'}} */>
+ 
+     <A/>
 
 
-<Grid item md={4} sm={4} xl={4} lg={4} /* style={{ backgroundColor:'yellow'}} */>
+<Grid item 
+md={4} 
+sm={4} 
+xl={4} 
+lg={4} /* style={{ backgroundColor:'yellow'}} */>
   <Stack>
    
    
@@ -67,11 +72,11 @@ export default function Home() {
 </Grid>
 
 
+     <B/>
 
-   <B/>
+</Grid>
 
-        </Grid>
-      </main>
+    </main>
 
      </LayoutContainer>
       </LayoutRoot>
