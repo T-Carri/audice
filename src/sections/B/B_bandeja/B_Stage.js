@@ -2,14 +2,15 @@ import Image from "next/image";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import IconButton from '@mui/material/IconButton';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
-import { useState } from "react";
+import { useState, useContext } from "react";
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Grid, Card, Box, Tooltip  } from "@mui/material";
+import GeneralContext from "@components/context/GeneralContext";
 
 
 const VideoCard = ({ title, thumbnailUrl, kind, id }) => {
   const urlForImg = thumbnailUrl.high.url
- 
+  const {disparadorYT_B } = useContext(GeneralContext);
   
   const [added, setAdded] = useState(false)
  
@@ -41,7 +42,7 @@ const VideoCard = ({ title, thumbnailUrl, kind, id }) => {
             </IconButton>        
       </Grid>
       <Grid item xl={4} lg={4} md={4} sm={4} xs={4}>
-      <IconButton aria-label="toPlay">
+      <IconButton aria-label="toPlay" onClick={()=>{disparadorYT_B(id)}} >
       <PlayArrowIcon sx={{ height: 45, width: 45 }} />
       </IconButton>    
       </Grid>  

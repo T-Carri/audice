@@ -20,8 +20,7 @@ export const B_Bandeja = (props) => {
   
  
     const [isFocused, setIsFocused] = useState(false);
-    const [searchValue, setSearchValue] = useState([]);
-    const [videos, setVideos] = useState([]);
+   
     
     const ValorRef = useRef('')
 

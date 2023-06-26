@@ -40,10 +40,7 @@ const [state, dispatch] = useReducer(GlobalState, initialState);
     dispatch({
       type: TYPES.CURRENTSEARCH_A , payload: response.data.items
     })
-    //setters 
-    // console.log(response)
-    // setSearchValue(response.data.items)
-    //console.log(searchValue)
+  
   } 
 
 
@@ -62,10 +59,7 @@ const [state, dispatch] = useReducer(GlobalState, initialState);
     dispatch({
       type: TYPES.CURRENTSEARCH_B , payload: response.data.items
     })
-    //setters 
-   // console.log(response)
-   // setSearchValue(response.data.items)
-    //console.log(searchValue)
+    
   } 
 
 
@@ -88,7 +82,18 @@ const addingToSB = (data) =>{
 
 
 
+const disparadorYT_A = (id) => {
+  dispatch({
+    type: TYPES.TRACKIDA, payload: id
+  })
+}  
 
+
+const disparadorYT_B = (id) => {
+  dispatch({
+    type: TYPES.TRACKIDB, payload: id
+  })
+}  
 
 //Search at SoundCloud
 
@@ -180,7 +185,7 @@ const addingToSB = (data) =>{
 
   return (
     <GeneralContext.Provider 
-      value={{ state, dispatch, onSearchA, onSearchB, addingToSA, addingToSB }}>
+      value={{ state, dispatch, onSearchA, onSearchB, addingToSA, addingToSB, disparadorYT_A, disparadorYT_B }}>
       {children}
       </GeneralContext.Provider>
   )
