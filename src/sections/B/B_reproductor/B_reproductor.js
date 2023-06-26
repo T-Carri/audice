@@ -1,14 +1,36 @@
-import  { useEffect} from 'react'
-import Grid from '@mui/system/Unstable_Grid/Grid'
-import { useTheme } from '@mui/material/styles';
+import { RepYT_B } from './Youtube/RepYT_B';
 
-import { RepYT } from './Youtube/RepYT';
-import Image from 'next/image';
-export const Reproductor = (props) => {
+
+export const B_reproductor = (props) => {
 
   const {service, side} = props
-  const theme = useTheme();
- console.log(service);
+
+   
+
+
+
+  return (
+       <>
+      
+    {service=='youtube' && <RepYT_B />}
+
+    {service=='soundcloud'&&<iframe width="100%" height="200" scrolling="no" frameborder="no"  src="https://soundcloud.com/dc4-682245951/playboi-carti-aint-been?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"></iframe>}
+     
+
+      </>
+      )
+    }
+      
+
+
+
+
+ 
+
+
+
+
+
 
 /* 
     useEffect(() => {
@@ -73,35 +95,3 @@ export const Reproductor = (props) => {
  */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  return (
-       <>
-      
-     
-
-      
-    {service=='youtube'&&
-    <RepYT side={side}  service={service}/>
-     }
-
-{service=='soundcloud'&&<iframe width="100%" height="200" scrolling="no" frameborder="no"  src="https://soundcloud.com/dc4-682245951/playboi-carti-aint-been?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"></iframe>
-
-
-}
-
-    </>
- 
-  )
-}

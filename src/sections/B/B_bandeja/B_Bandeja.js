@@ -1,17 +1,14 @@
 import {useState, useCallback, useContext, useRef} from 'react'
-import { Stack, Box, Tab, Tabs, Button, Typography, Grid } from '@mui/material'
-import {  InputAdornment, OutlinedInput, SvgIcon, InputLabel, NativeSelect, IconComponent } from '@mui/material';
-
+import { Stack, Box, Tab, Tabs, Button, Grid } from '@mui/material'
+import {  InputAdornment, OutlinedInput, SvgIcon,  NativeSelect } from '@mui/material';
 import MagnifyingGlassIcon from '@heroicons/react/24/solid/MagnifyingGlassIcon';
-import { Stage } from '../../A/A_bandeja/A_Stage';
-import { width } from '@mui/system';
-import Image from 'next/image';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import CloudIcon from '@mui/icons-material/Cloud';
 import ApiIcon from '@mui/icons-material/Api';
 import GeneralContext from '@components/context/GeneralContext';
 import { StageHistorial } from './B_StageHistorial';
 import { StageResultados } from './B_StageResultados';
+import { B_Stage } from './B_Stage';
 
 
 
@@ -115,7 +112,7 @@ export const B_Bandeja = (props) => {
        
        
         <Box height={300} p={1} style={{ backgroundColor:'white'}}>
-        <Grid container direction={'row'} /* spacing={} */>
+        <Grid container direction={'row'} >
   <Grid item md={4} sm={4} lg={8} xl={8} >
   <Tabs
              onChange={handleMethodChange} 
@@ -143,7 +140,7 @@ export const B_Bandeja = (props) => {
 
   
   <Grid item md={4} sm={4} lg={4} xl={4}>
-    {/*   <InputLabel htmlFor="select">Servicio</InputLabel> */}
+    
       <NativeSelect style={{width:'30%'}} onChange={(event)=>setService(event.target.value)} 
     
     sx={{ m: 0, minWidth: 120, width: 200, height: 50 }}
@@ -165,7 +162,7 @@ export const B_Bandeja = (props) => {
 
 {
   method === 'stage' && (
-    <Stage  agregados={state.stageYT_B}/>
+    <B_Stage  agregados={state.stageYT_B}/>
   )
 }
 

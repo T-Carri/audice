@@ -24,7 +24,21 @@ switch(action.type){
            ...state,
            stageYT_B: [...state.stageYT_B, action.payload] 
             }  
-            
+           
+    case TYPES.TRACKIDA:
+        return{
+            ...state, 
+            TrackIdA: action.payload
+              
+        }
+    case TYPES.TRACKIDB:
+         return{
+            ...state, 
+            TrackIdB: action.payload
+                  
+            }  
+
+
     default:
          return state
 }

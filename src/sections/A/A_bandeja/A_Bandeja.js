@@ -6,7 +6,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import CloudIcon from '@mui/icons-material/Cloud';
 import ApiIcon from '@mui/icons-material/Api';
 import GeneralContext from '@components/context/GeneralContext';
-import { Stage } from './A_Stage';
+import { A_Stage } from './A_Stage';
 import { StageResultados } from './A_StageResultados';
 import { StageHistorial } from './A_StageHistorial';
 
@@ -162,7 +162,7 @@ export const A_Bandeja = (props) => {
 
 {
   method === 'stage' && (
-    <Stage  agregados={state.stageYT_A} /> 
+    <A_Stage  agregados={state.stageYT_A} /> 
   )
 }
 

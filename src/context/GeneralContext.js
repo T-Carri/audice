@@ -19,7 +19,9 @@ export const GeneralProvider = ({children}) => {
     insearch_A:'', 
     insearch_B:'',
     stageYT_A:[],
-    stageYT_B:[]
+    stageYT_B:[], 
+    TrackIdA:'',
+    TrackIdB:'' 
     
   }
 

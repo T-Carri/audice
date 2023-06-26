@@ -1,0 +1,41 @@
+
+
+Actividad: 
+programar la reproduccion desde el stage a reproductor (servicio YT)
+   Objetivo: al darle play 
+        se cargara la rola en el reproductor 
+        y empezara a reproducir 
+entonces son dos procesos 
+si pudiera describir con mis palabras como 
+hacer esto seria 
+
+en el boton de play en stage un manejador de eventos
+que capture el id de la rola  subirlo al estado global
+en una variable que se llame TrackIdA y TrackIdB
+
+es probable que se necesite el dato de donde proviene 
+el track (de que servicio)
+
+ esto dispara el track que se intenta
+
+el stageResultados agrega al Stage 
+
+en el stage puedo agregar un flag de que servicio
+viene 
+
+al fin y al cabo al disparar el objeto puedo 
+haecr que sea identificado el servicio
+
+
+una vez e
+
+
+
+
+
+
+
+
+
+
+
